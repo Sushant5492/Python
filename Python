@@ -1,0 +1,58 @@
+# Print a message
+print("Hello world")
+
+# Get user input for a and b
+a = int(input("Enter a number: "))
+b = int(input("Enter another number: "))
+
+# Check if a is equal to b
+print("a is equal to b:", a == b)
+
+# Calculate the remainder of a divided by b
+print("a divided by b leaves a remainder of:", a /b)
+
+# Print the type of variable a
+a = 22.01
+b = type(a)
+print(b)
+
+# String slicing and length
+name = "sushant"
+print(name[2:7])  # Prints: shant
+print(len(name))  # Prints: 7
+
+# Negative indexing and slicing
+print(name[-6:-2])  # Prints: usha
+print(name[1:5])  # Prints: usha
+
+# Slicing and length
+print(name[:-2])  # Prints: sushan
+print(name[:3])  # Prints: sus
+print(name[0:5:2])  # Prints: suht
+
+# String methods
+a = "sushant shinde"
+print(a.startswith("s"))  # Prints: True
+print(a.endswith("nt"))  # Prints: True
+print(a.endswith("e"))  # Prints: False
+print(a.capitalize())  # Prints: Sushant shinde
+print(a.find("h"))  # Prints: 4
+print(a.replace("s", "ss"))  # Prints: ssushant sschine
+print(a.count("s"))  # Prints: 2
+
+# User input and formatting
+a = input("Enter your name: ")
+c = input("Enter a date: ")
+print(f"Good afternoon {a}")
+letter = f'''"{a}" You are selected! {c}'''
+print(letter)
+
+# String manipulation
+a = "sushant is a \"good boy\", not a bad boy."
+print(a)
+print(a.find(" "))  # Prints: 7
+print(a.replace(" ", "_"))  # Prints: sushant_is_a_"good_boy",_not_a_bad_boy.
+
+# Multiline string
+a = "sushant, \n\t good evening! \n Thank u."
+print(a)

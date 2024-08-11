@@ -105,3 +105,23 @@ print(a)  # Prints: [1, 10, 20, 22, 33, 90, 2092, 33333333]
 a.remove(33333333)
 print(a)  # Prints: [1, 10, 20, 22, 33, 90, 2092]
 
+# Create an empty tuple
+a = ()
+print(type(a))  # Prints: <class 'tuple'>
+
+# Create a tuple with integers
+b = (11, 111, 23, 393, 9289, 11)
+print(b.count(11))  # Prints: 2
+print(b.index(393))  # Prints: 3
+print(len(b))  # Prints: 6
+
+# Create an empty list for fruits
+fruits = []
+
+# Get user input for fruits and append to the list
+for i in range(5):
+    a = input("Enter a fruit's name: ")
+    fruits.append(a)
+
+# Print the list of fruits
+print(fruits)

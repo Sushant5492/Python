@@ -56,3 +56,52 @@ print(a.replace(" ", "_"))  # Prints: sushant_is_a_"good_boy",_not_a_bad_boy.
 # Multiline string
 a = "sushant, \n\t good evening! \n Thank u."
 print(a)
+
+# 11/08/2024
+# Create a list with mixed data types
+a = ["sushant", "prashant", "sandeep", 7, 11.12]
+print(a[4])  # Prints: 11.12
+
+# Modify the list
+a[3] = 9
+print(a)  # Prints: ["sushant", "prashant", "sandeep", 9, 11.12]
+
+# Get the length of the list
+b = len(a)
+print(b)  # Prints: 5
+
+# Access list elements
+print(a[3])  # Prints: 9
+print(a[1:4])  # Prints: ["prashant", "sandeep", 9]
+
+# Create a new list of integers
+a = [1, 33, 20, 22, 2092, 10, 90]
+
+# Sort the list in ascending order
+a.sort()
+print(a)  # Prints: [1, 10, 20, 22, 33, 90, 2092]
+
+# Append an element to the list
+a.append(2002)
+print(a)  # Prints: [1, 10, 20, 22, 33, 90, 2092, 2002]
+
+# Reverse the list
+a.reverse()
+print(a)  # Prints: [2002, 2092, 90, 33, 22, 20, 10, 1]
+
+# Insert an element at a specific position
+a.insert(1, 33333333)
+print(a)  # Prints: [2002, 33333333, 2092, 90, 33, 22, 20, 10, 1]
+
+# Remove an element from the list
+a.pop(0)
+print(a)  # Prints: [33333333, 2092, 90, 33, 22, 20, 10, 1]
+
+# Sort the list again
+a.sort()
+print(a)  # Prints: [1, 10, 20, 22, 33, 90, 2092, 33333333]
+
+# Remove a specific element
+a.remove(33333333)
+print(a)  # Prints: [1, 10, 20, 22, 33, 90, 2092]
+

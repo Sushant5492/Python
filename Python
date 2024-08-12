@@ -122,6 +122,8 @@ fruits = []
 for i in range(5):
     a = input("Enter a fruit's name: ")
     fruits.append(a)
+# Print the list of fruits
+print(fruits)
 
 # Create an empty list for student marks
 student_marks = []
@@ -169,5 +171,4 @@ print(my_tuple)
 # Print the count of 0 in the tuple
 print(f"0 in the tuple is {count_zero} times")
 
-# Print the list of fruits
-print(fruits)
+

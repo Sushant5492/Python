@@ -171,4 +171,40 @@ print(my_tuple)
 # Print the count of 0 in the tuple
 print(f"0 in the tuple is {count_zero} times")
 
+# Create a dictionary with mixed key-value pairs
+marks = {
+    "sushant": 100,
+    "prashant": 90,
+    "sangmeshwar": 80,
+    10: "swapnil"
+}
 
+# Print the type of the dictionary
+print(type(marks))  # Prints: <class 'dict'>
+
+# Access a value using its key
+print(marks[10])  # Prints: swapnil
+
+# Print all key-value pairs as tuples
+print(marks.items())  
+# Prints: dict_items([('sushant', 100), ('prashant', 90), ('sangmeshwar', 80), (10, 'swapnil')])
+
+# Print all keys
+print(marks.keys())  
+# Prints: dict_keys(['sushant', 'prashant', 'sangmeshwar', 10])
+
+# Print all values
+print(marks.values())  
+# Prints: dict_values([100, 90, 80, 'swapnil'])
+
+# Update the dictionary with new key-value pairs
+marks.update({"sushant": 98, "sandeep": 95})
+marks.update({11: "manoj"})
+
+# Print the updated dictionary
+print(marks)  
+# Prints: {'sushant': 98, 'prashant': 90, 'sangmeshwar': 80, 10: 'swapnil', 'sandeep': 95, 11: 'manoj'}
+
+# Use the get method to access a value
+print(marks.get(11))  # Prints: manoj
+print(marks.get(115))  # Prints: None

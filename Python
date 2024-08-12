@@ -123,5 +123,51 @@ for i in range(5):
     a = input("Enter a fruit's name: ")
     fruits.append(a)
 
+# Create an empty list for student marks
+student_marks = []
+
+# Get user input for marks and append to the list
+for i in range(6):
+    a = int(input("Enter Your Marks: "))
+    student_marks.append(a)
+
+# Sort the list in ascending order
+student_marks.sort()
+print(student_marks)
+
+# Create a tuple with mixed data types
+a = (11, 2, "ss", "sushant", 11.11)
+b = a.index(11.11)
+print(b)  # Prints: 4
+
+# Create a list of integers
+marks = [11, 2334, 2442, 2246]
+
+# Access list elements
+a = marks[0]
+b = marks[1]
+c = marks[2]
+d = marks[3]
+
+# Calculate the sum of list elements
+total = a + b + c + d
+print(total)
+
+# Use the built-in sum function to calculate the total
+print(sum(marks))
+
+
+# Create a tuple with integers
+my_tuple = (7, 0, 8, 0, 0, 9)
+
+# Count the occurrences of 0 in the tuple
+count_zero = my_tuple.count(0)
+
+# Print the tuple
+print(my_tuple)
+
+# Print the count of 0 in the tuple
+print(f"0 in the tuple is {count_zero} times")
+
 # Print the list of fruits
 print(fruits)

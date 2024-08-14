@@ -208,3 +208,75 @@ print(marks)
 # Use the get method to access a value
 print(marks.get(11))  # Prints: manoj
 print(marks.get(115))  # Prints: None
+
+# Create a set with mixed data types
+a = {11, 2, 2, 2, 3, 3, 46, 8, 98, 9, 9, 8, 8, 5, 3}
+print(type(a))  # Prints: <class 'set'>
+print(a)  # Prints: {11, 2, 3, 46, 8, 98, 9, 5}
+
+# Add a string to the set
+a.add("sushant")
+print(a)  # Prints: {11, 2, 3, 46, 8, 98, 9, 5, 'sushant'}
+
+# Get the length of the set
+print(len(a))  # Prints: 10
+
+# Remove an element from the set
+a.remove(98)
+print(a)  # Prints: {11, 2, 3, 46, 8, 9, 5, 'sushant'}
+
+# Pop an element from the set
+b = a.pop()
+print(b)  # Prints: 11 (or any other element)
+print(a)  # Prints: {2, 3, 46, 8, 9, 5, 'sushant'}
+
+# Clear the set
+a.clear()
+print(a)  # Prints: set()
+
+# Create new sets
+a = {1, 23, 3, 22, 4, 65, 43, 39, 6}
+b = {23, 3, 22, 174, 26488, 866, 190}
+aa = {1, 39, 22, 24}
+ba = {1, 39}
+
+# Check if aa is a superset of {1, 22}
+print(aa.issuperset({1, 22}))  # Prints: True
+
+# Check if ba is a subset of aa
+print(ba.issubset(aa))  # Prints: True
+
+# Get the intersection of a and b
+c = a.intersection(b)
+print(c)  # Prints: {23, 3, 22}
+
+# Get the union of a and b
+d = a.union(b)
+print(d)  # Prints: {1, 23, 3, 22, 4, 65, 43, 39, 6, 174, 26488, 866, 190}
+
+# Get the difference of a and b
+e = a - b
+f = b - a
+print(f)  # Prints: {174, 26488, 866, 190}
+print(e)  # Prints: {1, 4, 65, 43, 39, 6}
+
+# Create a dictionary
+a = {"cap": "topi", "god": "bhagavan", "slow": "dihere-dihire"}
+print(a.keys())  # Prints: dict_keys(['cap', 'god', 'slow'])
+
+# Get a value from the dictionary
+b = input("Enter a word: ")
+print(a[b])  # Prints: the value associated with the input key
+
+# Create an empty set
+a = set()
+
+# Add an element to the set
+b = input("Enter a value: ")
+a.add(b)
+print(a)  # Prints: {b}
+
+# Add another element to the set
+C = input("Enter a number: ")
+a.add(int(C))
+print(a)  # Prints: {b, int(C)}

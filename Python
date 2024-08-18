@@ -370,3 +370,58 @@ if age >= 18 and score >= 80:
     print("You are eligible to apply.")
 else:
     print("You are not eligible to apply.")
+
+
+# Ternary Operator
+x = 5
+result = "x is greater" if x > 10 else "x is less"
+
+# Conditional Expression with if
+x = 5
+if x > 10:
+    result = "x is greater"
+else:
+    result = "x is less"
+
+# Conditional Expression with elif
+x = 5
+if x > 10:
+    result = "x is greater"
+elif x == 5:
+    result = "x is equal to 5"
+else:
+    result = "x is less"
+
+# Conditional Expression with and, or, not
+x = 5
+y = 3
+if x > 10 and y < 5:
+    result = "x is greater and y is less"
+elif x > 10 or y < 5:
+    result = "x is greater or y is less"
+else:
+    result = "x is less and y is greater"
+
+# Conditional Expression with in, not in
+fruits = ["apple", "banana", "cherry"]
+x = "banana"
+if x in fruits:
+    result = "x is in fruits"
+else:
+    result = "x is not in fruits"
+
+# Conditional Expression with ==, !=, >, <, >=, <=
+x = 5
+y = 3
+if x == y:
+    result = "x is equal to y"
+elif x != y:
+    result = "x is not equal to y"
+elif x > y:
+    result = "x is greater than y"
+elif x < y:
+    result = "x is less than y"
+elif x >= y:
+    result = "x is greater than or equal to y"
+elif x <= y:
+    result = "x is less than or equal to y"

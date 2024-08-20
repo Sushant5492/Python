@@ -463,3 +463,11 @@ print("post talk about sushant")
 else:
 
 print("somthing worng")
+
+a = ["sushant", "prashant", "ram","samir"]
+
+p1 = input("Enter a name :")
+
+if (p1 in a): print("present") else :
+
+print("not present")

@@ -539,3 +539,91 @@ for i in range(11):
 a = "sushant"
 for i in a:
     print(i)
+
+#Multiplication Table
+
+n = int(input("Enter a number: "))
+for i in range(1, 11):
+    print(f"{n} x {i} = {n * i}")
+
+
+#Name Greeting
+
+names = ["soham", "sushant", "rohan", "karan", "ram"]
+for i in names:
+    if i.startswith("s"):
+        print(f"Great {i}")
+    else:
+        print("Done")
+
+
+#Multiplication Table (Alternative)
+
+a = int(input("Enter a number: "))
+i = 1
+while i < 11:
+    print(f"{i} x {a} = {i * a}")
+    i += 1
+
+
+#Prime Number Check
+
+a = int(input("Enter a number: "))
+for i in range(2, a):
+    if (a % i) == 0:
+        print("Number is not prime")
+        break
+else:
+    print("It's a prime number")
+
+
+#Sum of Numbers
+
+a = int(input("Enter a number: "))
+sum = 0
+i = 1
+while i <= a:
+    sum += i
+    i += 1
+print(sum)
+
+
+#Factorial Calculation
+
+a = int(input("Enter a number: "))
+b = 1
+for i in range(1, a + 1):
+    b *= i
+print(f"The factorial of {a} is {b}")
+
+
+#Diamond Pattern
+
+a = int(input("Enter a number: "))
+for i in range(1, a + 1):
+    print(" " * (a - i), end="")
+    print("*" * (2 * i - 1), end="")
+    print("")
+
+
+#Right Triangle Pattern
+
+a = int(input("Enter a number: "))
+for i in range(1, a + 1):
+    print(" " * (a - 1), end="")
+    print("* " * i, end="")
+    print("")
+
+
+#Square Pattern
+
+a = int(input("Enter a number: "))
+for i in range(1, a + 1):
+    if i == 1 or i == a:
+        print("*" * a, end="")
+    else:
+        print("*", end="")
+        print(" " * (a - 2), end="")
+        print("*", end="")
+    print("")
+

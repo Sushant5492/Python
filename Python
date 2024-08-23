@@ -627,3 +627,59 @@ for i in range(1, a + 1):
         print("*", end="")
     print("")
 
+# Average Function
+def avg():
+    a = int(input("Enter a number: "))
+    b = int(input("Enter a number: "))
+    c = int(input("Enter a number: "))
+    average = (a + b + c) / 3
+    print(average)
+
+avg()
+avg()
+print("Thank you")
+avg()
+avg()
+avg()
+
+# Good Day Function
+def GoodDay():
+    a = input("Enter your name: ")
+    print("Good Day, " + a)
+
+GoodDay()
+print("Good Day. ", end="")
+
+# Good Day Function with Parameters
+def GoodDay(a, ending, c):
+    print("Good Day, " + a + ending)
+    print(c)
+
+GoodDay("sushant!", "Thank u", "bro")
+GoodDay("sonya!", "Thanks", "bro")
+
+# Name Function
+def name(a):
+    print("Good Day," + a)
+    return "bye"
+
+b = name("sushant!")
+print(b)
+
+# Good Day Function with Default Parameter
+def GoodDay(a, ending="Thanks"):
+    print("Good Day, " + a + ending)
+
+GoodDay("sushant!", "Thank u")
+GoodDay("prashant!")
+
+# Factorial Function
+def factorial(n):
+    if n == 1 or n == 0:
+        return 1
+    return n * factorial(n - 1)
+
+n = int(input("Enter a number: "))
+print("Factorial number of", n, "is:", factorial(n))
+
+

@@ -682,4 +682,41 @@ def factorial(n):
 n = int(input("Enter a number: "))
 print("Factorial number of", n, "is:", factorial(n))
 
+def greatest(a, b, c):
+    # Check if a is the greatest
+    if a > b and a > c:
+        return a
+    
+    # Check if b is the greatest
+    elif b > a and b > c:
+        return b
+    
+    # Check if c is the greatest
+    elif c > b and c > a:
+        return c
+
+a = 1
+b = 23
+c = 3
+
+print(greatest(a, b, c)) 
+
+
+
+def greatest(a, b, c):
+    return max(a, b, c)
+
+a = 1
+b = 23
+c = 3
+
+print(greatest(a, b, c))
+
+
+def f_to_c(f):
+    return 5*(f-32)/9
+
+f = int(input("Enter temperature in Fahrenheit: "))
+
+print(f"{f}°F is equal to {f_to_c(f)}°C")
 

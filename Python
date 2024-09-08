@@ -842,3 +842,48 @@ else:
         print("You lose!")
     else:
         print("You win!") 
+
+
+
+# Reading from a file
+with open("sus.txt", "r") as file:
+    data = file.read()
+print(data)
+
+# Writing to a file
+st = "Sushant is a honest student"
+with open("sus.txt", "w") as file:
+    file.write(st)
+
+# Reading lines from a file
+with open("sus.txt", "r") as file:
+    lines = file.readlines()
+print(lines, type(lines))
+
+# Reading line by line
+with open("sus.txt", "r") as file:
+    line1 = file.readline()
+    print(line1)
+    line2 = file.readline()
+    print(line2)
+    line3 = file.readline()
+    print(line3)
+    line4 = file.readline()
+    print(line4)
+
+# Reading line by line using while loop
+with open("sus.txt", "r") as file:
+    line = file.readline()
+    while line != "":
+        print(line)
+        line = file.readline()
+
+# Appending to a file
+st = "Sushant"
+with open("sus.txt", "a") as file:
+    file.write(st)
+
+# Reading file using with statement
+with open("sus.txt", "r") as file:
+    print(file.read())
+

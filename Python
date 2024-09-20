@@ -886,4 +886,56 @@ with open("sus.txt", "a") as file:
 # Reading file using with statement
 with open("sus.txt", "r") as file:
     print(file.read())
+Function to calculate sum and product
+def calculate_sum_and_product(a, b):
+    sum = a + b
+    product = a * b
+    return sum, product
+
+a = calculate_sum_and_product(3, 2)
+print(a)
+
+
+Function to calculate average
+def calculate_average(a, b, c):
+    total = a + b + c
+    average = total / 3
+    return average
+
+a = calculate_average(1, 2, 3)
+print(a)
+
+
+Tuple comparison
+a = (11, 2, "ss", "sushant", 11.11)
+b = (11, 2, "ss prime", "sushant", 11.11)
+
+def print_tuples():
+    print(a, end="")
+    print(b)
+
+print_tuples()
+
+
+Factorial check (corrected logic)
+def check_factorial(n):
+    if n >= 0 and n % 2 == 0:
+        print("This number is even.")
+    else:
+        print("This number is not even.")
+
+n = int(input("Enter a number: "))
+check_factorial(n)
+
+
+Currency conversion (USD to INR)
+def convert_usd_to_inr(usd):
+    exchange_rate = 83
+    inr = usd * exchange_rate
+    return inr
+
+n = int(input("Enter USD to convert to INR: "))
+a = convert_usd_to_inr(n)
+print(f"{n} USD = {a} INR")
+``]
 

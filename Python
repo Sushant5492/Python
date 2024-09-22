@@ -939,3 +939,94 @@ a = convert_usd_to_inr(n)
 print(f"{n} USD = {a} INR")
 ``]
 
+# Read from file
+with open("sus.txt", "r") as file:
+    data = file.read()
+    print(data)
+
+# Write to file
+with open("sus.txt", "w") as file:
+    data = file.write("prashant")
+    print(data)
+
+# Append to file
+with open("sus.txt", "a") as file:
+    file.write(" at the end we are append these line\n")
+
+# Overwrite file
+with open("sushant.txt", "w") as file:
+    file.write("hey sushant")
+
+# Read and write file
+with open("sushant.txt", "r+") as file:
+    file.write("hey prashant")
+    print(file.read())
+
+# Append and read file
+with open("sushant.txt", "a+") as file:
+    file.write("\nhey sushant")
+
+# Write to file using with statement
+with open("sushant.txt", "a+") as file:
+    data = file.write("\nmy name is sushant")
+    print(data)
+
+# Delete file
+import os
+with open("sample.txt", "w+") as file:
+    file.write("sushant prashant are the boys")
+os.remove("sample.txt")
+
+# Replace text in file
+with open("practice.txt", "r") as file:
+    data = file.read()
+    replaced_data = data.replace("java", "python")
+    print(replaced_data)
+with open("practice.txt", "w") as file:
+    file.write(replaced_data)
+
+# Check if word exists in file
+def check_word(word):
+    with open("practice.txt", "r") as file:
+        data = file.read()
+        if word in data:
+            print("Yes, it's present")
+        else:
+            print("No, it's not present")
+
+check_word("hii")
+
+# Check if word exists in file
+def check_word_line(word):
+    with open("practice.txt", "r") as file:
+        for line in file:
+            if word in line:
+                print(line)
+
+check_word_line("learning")
+
+# Count occurrences of word in file
+def count_word(word):
+    with open("practice.txt", "r") as file:
+        data = file.read()
+        return data.count(word)
+
+print(count_word("programming"))
+
+# Read numbers from file and count even numbers
+with open("samp.txt", "r") as file:
+    data = file.read()
+    nums = data.split(",")
+    count = sum(1 for num in nums if int(num) % 2 == 0)
+    print(count)
+
+# Print numbers from file
+with open("samp.txt", "r") as file:
+    data = file.read()
+    num = ""
+    for char in data:
+        if char == ",":
+            print(num)
+            num = ""
+        else:
+            num += char

@@ -1,0 +1,82 @@
+# Employee Class
+class Employee:
+    salary = 1200000
+    language = "python"
+
+    def __init__(self, name):
+        self.name = name
+
+    def get_info(self):
+        print(f"Your language is {self.language}, and salary is {self.salary}")
+
+# Create instances
+sushant = Employee("sushant")
+sushant.language = "javascript"  # Changing instance attribute
+
+print(sushant.name, sushant.salary, sushant.language)
+print(sushant.salary, sushant.language)
+sushant.get_info()
+
+# Static Method Example
+class EmployeeStatic:
+    salary = 1000
+    work = "mentor"
+
+    @staticmethod
+    def get_info():
+        print(f"Mentor salary is: {EmployeeStatic.salary}, Work is: {EmployeeStatic.work}")
+
+sushant_static = EmployeeStatic()
+sushant_static.get_info()
+
+# Company Class
+class Company:
+    work = "Microsoft"
+
+    def __init__(self, name, salary, pincode):
+        self.name = name
+        self.salary = salary
+        self.pincode = pincode
+        print(f"{Company.work}\nName: {self.name}\nSalary: {self.salary},\nPincode: {self.pincode}")
+
+# Create company instances
+sushant_company = Company("sushant", "150000", "416502")
+prashant_company = Company("prashant", "150000", "416502")
+rohan_company = Company("rohan", "150000", "416502")
+
+# Calculator Class
+class Calculator:
+    def __init__(self, n):
+        self.n = n
+        print(f"The square is: {n * n},\nThe cube is: {n * n * n},\nSquare root is: {n ** 0.5}")
+
+    @staticmethod
+    def square():
+        print("hello")
+
+n = int(input("Enter a number: "))
+calculator_instance = Calculator(n)
+calculator_instance.square()
+
+# Train Class
+from random import randint
+
+class Train:
+    def __init__(self, train_no):
+        self.train_no = train_no
+
+    def book(self, fro, to):
+        print(f"Ticket is booked in train no: {self.train_no}, from {fro} to {to}")
+
+    def get_status(self):
+        print(f"Ticket no. : {self.train_no} is running on time")
+
+    def get_fare(self, fro, to):
+        fare = randint(111, 999)
+        print(f"Ticket fare in train no.: {self.train_no}, From {fro} to {to}, is {fare}")
+
+# Create train instance
+train_instance = Train(122)
+train_instance.book("kolhapur", "pune")
+train_instance.get_status()
+train_instance.get_fare("kolhapur", "mumbai")

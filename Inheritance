@@ -1,0 +1,103 @@
+# Single inheritance example
+class Emp:
+    name = "Tata Motors"
+
+    def show(self):
+        print(f"The name is: {self.name}")
+
+class Program:
+    namee = "Tata Steel"
+
+    def showless(self):
+        print(f"The name of the company is: {self.namee}")
+
+class Coder(Emp, Program):
+    company = "Tata Power"
+
+    def showmore(self):
+        print(f"The company name is: {self.company}")
+
+# Creating instances of the classes
+a = Emp()
+b = Program()
+c = Coder()
+
+print(a.name, b.namee, c.company)
+
+c.show()       # From Emp class
+c.showless()   # From Program class
+c.showmore()   # From Coder class
+
+
+# Multilevel inheritance example
+class Person1:
+    a = 10
+
+class Person2(Person1):  # Person1 data comes in Person2
+    b = 20
+
+class Person3(Person2):  # Person2 data comes in Person3
+    def s(self):
+        super().__init__()
+        # Super method works to initialize parents' attributes if needed
+        self.c = Person1.a + Person2.b
+
+o = Person3()
+print(f"{o.a} + {o.b} = {o.a + o.b}")  # Output based on inherited attributes
+
+
+# Using class method example
+class EmpClassMethod:
+    a = 1
+
+    @classmethod
+    def show(cls):
+        print(f"The value of a is {cls.a}")
+
+b = EmpClassMethod()
+b.a = 45  # This will modify instance variable, not class variable
+b.show()  # Still prints class variable value
+
+
+# Property decorator example
+class EmpProperty:
+    def __init__(self):
+        self._fname = ""
+        self._lname = ""
+
+    @property
+    def name(self):
+        return f"{self._fname} {self._lname}"
+
+    @name.setter
+    def name(self, value):
+        self._fname = value.split(" ")[0]
+        self._lname = value.split(" ")[1]
+
+e = EmpProperty()
+e.name = "Sushant Shinde"
+print(e.name)  # Should print "Sushant Shinde"
+
+
+# Operator overloading example
+class Add:
+    def __init__(self, n):
+        self.n = n
+
+    def __add__(self, other):
+        return self.n + other.n
+
+    def __mul__(self, other):
+        return self.n * other.n
+
+    def __floordiv__(self, other):
+        return self.n // other.n
+
+a = Add(10)
+b = Add(5)
+
+# Test operator overloading
+print(a + b)      # Addition
+print(a * b)      # Multiplication
+print(a // b)     # Floor Division
+

@@ -101,3 +101,88 @@ print(a + b)      # Addition
 print(a * b)      # Multiplication
 print(a // b)     # Floor Division
 
+# Corrected Person class with name validation
+class Person:
+    def __init__(self, name):
+        self._name = name
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, value):
+        if len(value) <= 3:
+            raise ValueError("Name length should be greater than 3")
+        self._name = value
+
+# Example usage
+p = Person("Sushant")
+print(f"Your name is fulfilling our conditions: {p.name}")
+
+# Practice Set
+class TwoDVector:
+    def __init__(self, i, j):
+        self.i = i
+        self.j = j
+
+    def name(self):
+        print(f"{self.i}i + {self.j}j")
+
+class ThreeDVector(TwoDVector):
+    def __init__(self, i, j, k):
+        super().__init__(i, j)
+        self.k = k
+
+    def name(self):
+        print(f"{self.i}i + {self.j}j + {self.k}k")
+
+# Example usage
+a = TwoDVector(4, 1)
+a.name()  # Output: 4i + 1j
+
+b = ThreeDVector(4, 3, 2)
+b.name()  # Output: 4i + 3j + 2k
+
+
+# Animal inheritance structure
+class Animals:
+    pass
+
+class Pets(Animals):
+    pass
+
+class Dog(Pets):
+    def __init__(self):
+        print("Bark Bark!")
+
+# Example usage
+dog = Dog()  # Output: Bark Bark!
+
+
+# Employee class with salary increment logic
+class Employee:
+    salary = 234
+    increment = 20
+
+    @property
+    def salary_after_increment(self):
+        return self.salary + (self.salary * self.increment / 100)  # 280
+
+    @salary_after_increment.setter
+    def salary_after_increment(self, salary):
+        self.increment = ((salary / self.salary) - 1) * 100
+
+# Example usage
+a = Employee()
+print(a.salary_after_increment)  # Output: 280.8
+
+# Setting new increment using salary
+a.salary_after_increment = 210
+print(a.increment)  # Output: -10.256410256410255 (since new salary is less than old one)
+
+# Setting new increment based on different salary
+a.salary_after_increment = 100.9
+print(a.increment)  # Output: -56.87606837606838
+
+

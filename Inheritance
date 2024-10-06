@@ -184,5 +184,58 @@ print(a.increment)  # Output: -10.256410256410255 (since new salary is less than
 # Setting new increment based on different salary
 a.salary_after_increment = 100.9
 print(a.increment)  # Output: -56.87606837606838
+# 2D Vector class
+class twodvector():
+    def __init__(self, i, j):
+        self.i = i
+        self.j = j
+
+# 3D Vector class inheriting from twodvector
+class threedvector(twodvector):
+    def __init__(self, i, j, k):
+        super().__init__(i, j)
+        self.k = k
+    
+    def show(self):
+        print(f"{self.i}i + {self.j}j + {self.k}k")
+
+# Example usage
+a = threedvector(31, 2, 2)
+a.show()  # Output: 31i + 2j + 2k
+# Animal class
+class animal():
+    pass
+
+# Pets class inheriting from Animal
+class pets(animal):
+    pass
+
+# Dog class inheriting from Pets
+class dog(pets):
+    def show(self):
+        print("bark bark!")
+
+# Example usage
+a = dog()
+a.show()  # Output: bark bark!
+# Complex number class
+class complex():
+    def __init__(self, i, r):
+        self.i = i
+        self.r = r
+    
+    # Overloading + operator
+    def __add__(self, c2):
+        return complex(self.i + c2.i, self.r + c2.r)
+    
+    # String representation
+    def __str__(self):
+        return f"{self.i} + {self.r}i"
+
+# Example usage
+c1 = complex(2, 3)
+c2 = complex(4, 5)
+c3 = c1 + c2
+print(c3)  # Output: 6 + 8i
 
 
